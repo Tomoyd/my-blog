@@ -1,23 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>a 标签</title>
-    <url>/my-blog/2019/11/15/aTag/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>a 标签</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 搭建个人博客</title>
-    <url>/my-blog/2019/11/14/test/</url>
-    <content><![CDATA[<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>npm install -g hexo</p>
-<h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><p>命令行输入 <code>hexo init blogname</code></p>
-<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>下载next主题</p>
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">官网文档配置链接</a></p>
-]]></content>
-      <tags>
-        <tag>第一个博客</tag>
-      </tags>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>a 标签</title>
+      <link href="/my-blog/2019/11/15/aTag/"/>
+      <url>/my-blog/2019/11/15/aTag/</url>
+      
+        <content type="html"><![CDATA[<h2 id="使用背景"><a href="#使用背景" class="headerlink" title="使用背景"></a>使用背景</h2><p>a 标签在实际开发过程中是会常用到，比如<strong>下载，跳转页面，导航</strong>等功能的实现</p><h2 id="实现下载"><a href="#实现下载" class="headerlink" title="实现下载"></a>实现下载</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> a 标签 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo 搭建个人博客</title>
+      <link href="/my-blog/2019/11/14/index/"/>
+      <url>/my-blog/2019/11/14/index/</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>npm install -g hexo</p><h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><p>命令行输入 <code>hexo init blogname</code></p><h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>下载next主题</p><h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">官网文档配置链接</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 个人向 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
