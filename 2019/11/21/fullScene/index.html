@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="BOM," />
+  <meta name="keywords" content="dom," />
 
 
 
@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="浏览器全屏实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的实现方法;其次要考虑到功能完整性， 开启全屏和关闭全屏应是一致出现的浏览器支持问题调用全屏方方法一般是使用dom元素的 requestFullScreen()方法 所以应该有以下判断： 123let domEl = document.documentElement;let requestFullScreen= domEl.req">
-<meta name="keywords" content="BOM">
+<meta name="description" content="浏览器全屏实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的全屏实现方法及标准的实现方法;其次要考虑到功能完整性，开启全屏和关闭全屏应是一致出现的,预览地址 全屏方法处理调用dom元素的标准全屏方法requestFullScreen()，考虑到兼容各个浏览器故有以下代码 ： 123456789const getMyRequestFullScreen=()=&amp;gt;&amp;#123;    le">
+<meta name="keywords" content="dom">
 <meta property="og:type" content="article">
 <meta property="og:title" content="fullScene">
 <meta property="og:url" content="https:&#x2F;&#x2F;tomoyd.github.io&#x2F;my-blog&#x2F;2019&#x2F;11&#x2F;21&#x2F;fullScene&#x2F;index.html">
 <meta property="og:site_name" content="Tomo">
-<meta property="og:description" content="浏览器全屏实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的实现方法;其次要考虑到功能完整性， 开启全屏和关闭全屏应是一致出现的浏览器支持问题调用全屏方方法一般是使用dom元素的 requestFullScreen()方法 所以应该有以下判断： 123let domEl = document.documentElement;let requestFullScreen= domEl.req">
+<meta property="og:description" content="浏览器全屏实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的全屏实现方法及标准的实现方法;其次要考虑到功能完整性，开启全屏和关闭全屏应是一致出现的,预览地址 全屏方法处理调用dom元素的标准全屏方法requestFullScreen()，考虑到兼容各个浏览器故有以下代码 ： 123456789const getMyRequestFullScreen=()=&amp;gt;&amp;#123;    le">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-21T16:23:59.275Z">
+<meta property="og:updated_time" content="2019-11-25T16:52:51.808Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -367,7 +367,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  116 字
+                  300 字
                 </span>
               
 
@@ -404,9 +404,17 @@
       
 
       
-        <h2 id="浏览器全屏"><a href="#浏览器全屏" class="headerlink" title="浏览器全屏"></a>浏览器全屏</h2><pre><code>实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的实现方法;其次要考虑到功能完整性，
-开启全屏和关闭全屏应是一致出现的</code></pre><h2 id="浏览器支持问题"><a href="#浏览器支持问题" class="headerlink" title="浏览器支持问题"></a>浏览器支持问题</h2><p>调用全屏方方法一般是使用dom元素的 requestFullScreen()方法 所以应该有以下判断：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> domEl = <span class="built_in">document</span>.documentElement;</span><br><span class="line"><span class="keyword">let</span> requestFullScreen= domEl.requestFullSceen||domEl.webkitRequestFullScreen||domEl.mozRequestFullScreen||domEl.msRequestFullScreen</span><br><span class="line">requestFullScreen&amp;&amp;requestFullScreen()</span><br></pre></td></tr></table></figure>
+        <h2 id="浏览器全屏"><a href="#浏览器全屏" class="headerlink" title="浏览器全屏"></a>浏览器全屏</h2><p>实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的全屏实现方法及标准的实现方法;其次要考虑到功能完整性，开启全屏和关闭全屏应是一致出现的,<a href="https://tomoyd.github.io/FrontedTechStack/demo/FullScreen/full-screen">预览地址</a></p>
+<h2 id="全屏方法处理"><a href="#全屏方法处理" class="headerlink" title="全屏方法处理"></a>全屏方法处理</h2><p>调用dom元素的标准全屏方法requestFullScreen()，考虑到兼容各个浏览器故有以下代码 ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getMyRequestFullScreen=<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> myEl = <span class="built_in">document</span>.documentElement;</span><br><span class="line">    <span class="keyword">return</span> myEl.requestFullScreen||myEl.webkitRequestFullScreen</span><br><span class="line">    ||myEl.mozRequestFullScreen||myEl.msRequestFullScreen</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用得到通用的函数句柄</span></span><br><span class="line"><span class="keyword">let</span> openFullScreen=getMyRequestFullScreen()</span><br><span class="line"><span class="comment">// 为函数指定this的值，这里使用call（），这里假设targetElement为我们所要全屏的对象</span></span><br><span class="line">openFullScreen.call(targetElement)</span><br></pre></td></tr></table></figure>
+
+<h2 id="退出全屏处理"><a href="#退出全屏处理" class="headerlink" title="退出全屏处理"></a>退出全屏处理</h2><p>退出全屏，需要调用document的标准方法exitFullscreen(),兼容各个浏览器故有：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getExitFullScreen=<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">document</span>.exitFullScreen||<span class="built_in">document</span>.mozCancelFullScreen||</span><br><span class="line">	<span class="built_in">document</span>.webkitCancelScreen||<span class="built_in">document</span>.msExitFullScreen</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> exitFullScreen=getExitFullScreen()</span><br><span class="line">exitFullScreen.call(targetElement)</span><br></pre></td></tr></table></figure>
+
+<h2 id="判断是否处于全屏"><a href="#判断是否处于全屏" class="headerlink" title="判断是否处于全屏"></a>判断是否处于全屏</h2><p>标准属性fullscreenElement是否为null可以判断，考虑到各个浏览器兼容性故有：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isFullScreen=<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (<span class="built_in">document</span>.fullscreenElement&amp;&amp;<span class="built_in">document</span>.fullscreenElement!==<span class="literal">null</span>)||</span><br><span class="line">        <span class="built_in">document</span>.webkitIsFullScreen||<span class="built_in">document</span>.mozFullScreen</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="综合上述"><a href="#综合上述" class="headerlink" title="综合上述"></a>综合上述</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleFullScreen(targetElement)&#123;</span><br><span class="line">	<span class="keyword">let</span> openFullScreen=getMyRequestFullScreen()</span><br><span class="line">	<span class="keyword">let</span> shutFullScreen=getExitFullScreen()</span><br><span class="line">	<span class="keyword">let</span> isFull=isFullScreen()</span><br><span class="line">	<span class="keyword">if</span>(isFull)&#123;</span><br><span class="line">		shutFullScreen()</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        openFullScreen()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -443,7 +451,7 @@
       
         <div class="post-tags">
           
-            <a href="/my-blog/tags/BOM/" rel="tag"># BOM</a>
+            <a href="/my-blog/tags/dom/" rel="tag"># dom</a>
           
         </div>
       
@@ -613,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器全屏"><span class="nav-number">1.</span> <span class="nav-text">浏览器全屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器支持问题"><span class="nav-number">2.</span> <span class="nav-text">浏览器支持问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器全屏"><span class="nav-number">1.</span> <span class="nav-text">浏览器全屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全屏方法处理"><span class="nav-number">2.</span> <span class="nav-text">全屏方法处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退出全屏处理"><span class="nav-number">3.</span> <span class="nav-text">退出全屏处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否处于全屏"><span class="nav-number">4.</span> <span class="nav-text">判断是否处于全屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#综合上述"><span class="nav-number">5.</span> <span class="nav-text">综合上述</span></a></li></ol></div>
             
 
           </div>
@@ -647,7 +655,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">642</span>
+    <span title="Site words total count">826</span>
   
 </div>
 
