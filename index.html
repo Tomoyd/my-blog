@@ -284,6 +284,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tomoyd.github.io/my-blog/my-blog/2019/11/21/fullScene/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tomoyd">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/my-blog/images/Tomo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tomo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/my-blog/2019/11/21/fullScene/" itemprop="url">fullScene</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-21T23:46:51+08:00">
+                2019-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/my-blog/2019/11/21/fullScene/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/my-blog/2019/11/21/fullScene/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/my-blog/2019/11/21/fullScene/" class="leancloud_visitors" data-flag-title="fullScene">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  116 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="浏览器全屏"><a href="#浏览器全屏" class="headerlink" title="浏览器全屏"></a>浏览器全屏</h2><pre><code>实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的实现方法;其次要考虑到功能完整性，
+开启全屏和关闭全屏应是一致出现的</code></pre><h2 id="浏览器支持问题"><a href="#浏览器支持问题" class="headerlink" title="浏览器支持问题"></a>浏览器支持问题</h2><p>调用全屏方方法一般是使用dom元素的 requestFullScreen()方法 所以应该有以下判断：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> domEl = <span class="built_in">document</span>.documentElement;</span><br><span class="line"><span class="keyword">let</span> requestFullScreen= domEl.requestFullSceen||domEl.webkitRequestFullScreen||domEl.mozRequestFullScreen||domEl.msRequestFullScreen</span><br><span class="line">requestFullScreen&amp;&amp;requestFullScreen()</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://tomoyd.github.io/my-blog/my-blog/2019/11/15/aTag/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -726,7 +901,7 @@
               
                 <a href="/my-blog/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -748,7 +923,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/my-blog/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -809,7 +984,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">526</span>
+    <span title="Site words total count">642</span>
   
 </div>
 
