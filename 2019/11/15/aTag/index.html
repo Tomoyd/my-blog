@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="使用背景a 标签在实际开发过程中是会常用到，比如下载，跳转页面，导航等功能的实现 实现下载有三种方式可以实现，示例地址  直接使用href属性链接到资源地址 1&amp;lt;a href=&quot;资源地址&quot;&amp;gt;下载&amp;lt;&#x2F;a&amp;gt;  加入download属性 1&amp;lt;a href=&quot;资源地址&quot; download&amp;gt;下载&amp;lt;&#x2F;a&amp;gt;    这两种方式其实可以看做是一种下载方式，不带down">
+<meta name="description" content="使用背景a 标签在实际开发过程中是会常用到，比如下载，跳转页面，导航等功能的实现 实现下载有三种方式可以实现，示例地址">
 <meta name="keywords" content="a 标签">
 <meta property="og:type" content="article">
 <meta property="og:title" content="a 标签">
 <meta property="og:url" content="https:&#x2F;&#x2F;tomoyd.github.io&#x2F;my-blog&#x2F;2019&#x2F;11&#x2F;15&#x2F;aTag&#x2F;index.html">
 <meta property="og:site_name" content="Tomo">
-<meta property="og:description" content="使用背景a 标签在实际开发过程中是会常用到，比如下载，跳转页面，导航等功能的实现 实现下载有三种方式可以实现，示例地址  直接使用href属性链接到资源地址 1&amp;lt;a href=&quot;资源地址&quot;&amp;gt;下载&amp;lt;&#x2F;a&amp;gt;  加入download属性 1&amp;lt;a href=&quot;资源地址&quot; download&amp;gt;下载&amp;lt;&#x2F;a&amp;gt;    这两种方式其实可以看做是一种下载方式，不带down">
+<meta property="og:description" content="使用背景a 标签在实际开发过程中是会常用到，比如下载，跳转页面，导航等功能的实现 实现下载有三种方式可以实现，示例地址">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-18T17:02:23.982Z">
+<meta property="og:updated_time" content="2019-11-26T17:23:26.017Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -98,7 +98,7 @@
     root: '/my-blog/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -222,7 +222,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+            <a href="javascript:;" target="_self" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -416,6 +416,7 @@
       
         <h2 id="使用背景"><a href="#使用背景" class="headerlink" title="使用背景"></a>使用背景</h2><p>a 标签在实际开发过程中是会常用到，比如<strong>下载，跳转页面，导航</strong>等功能的实现</p>
 <h2 id="实现下载"><a href="#实现下载" class="headerlink" title="实现下载"></a>实现下载</h2><p>有三种方式可以实现，<a href="https://tomoyd.github.io/hexo-blog/demos/aTag/download.html">示例地址</a></p>
+<a id="more"></a>
 <ul>
 <li><p>直接使用<code>href</code>属性链接到资源地址</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"资源地址"</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -476,7 +477,7 @@
       
         <div class="post-tags">
           
-            <a href="/my-blog/tags/a-%E6%A0%87%E7%AD%BE/" rel="tag"># a 标签</a>
+            <a href="/my-blog/tags/a-%E6%A0%87%E7%AD%BE/" rel="tag"><i class="fa fa-tag"></i> a 标签</a>
           
         </div>
       
@@ -543,6 +544,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 

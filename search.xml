@@ -4,6 +4,7 @@
     <title>fullScene</title>
     <url>/my-blog/2019/11/21/fullScene/</url>
     <content><![CDATA[<h2 id="浏览器全屏"><a href="#浏览器全屏" class="headerlink" title="浏览器全屏"></a>浏览器全屏</h2><p>实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的全屏实现方法及标准的实现方法;其次要考虑到功能完整性，开启全屏和关闭全屏应是一致出现的,<a href="https://tomoyd.github.io/FrontedTechStack/demo/FullScreen/full-screen">预览地址</a></p>
+<a id="more"></a>
 <h2 id="全屏方法处理"><a href="#全屏方法处理" class="headerlink" title="全屏方法处理"></a>全屏方法处理</h2><p>调用dom元素的标准全屏方法requestFullScreen()，考虑到兼容各个浏览器故有以下代码 ：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> getMyRequestFullScreen=<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> myEl = <span class="built_in">document</span>.documentElement;</span><br><span class="line">    <span class="keyword">return</span> myEl.requestFullScreen||myEl.webkitRequestFullScreen</span><br><span class="line">    ||myEl.mozRequestFullScreen||myEl.msRequestFullScreen</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用得到通用的函数句柄</span></span><br><span class="line"><span class="keyword">let</span> openFullScreen=getMyRequestFullScreen()</span><br><span class="line"><span class="comment">// 为函数指定this的值，这里使用call（），这里假设targetElement为我们所要全屏的对象</span></span><br><span class="line">openFullScreen.call(targetElement)</span><br></pre></td></tr></table></figure>
 
@@ -25,6 +26,7 @@
     <url>/my-blog/2019/11/15/aTag/</url>
     <content><![CDATA[<h2 id="使用背景"><a href="#使用背景" class="headerlink" title="使用背景"></a>使用背景</h2><p>a 标签在实际开发过程中是会常用到，比如<strong>下载，跳转页面，导航</strong>等功能的实现</p>
 <h2 id="实现下载"><a href="#实现下载" class="headerlink" title="实现下载"></a>实现下载</h2><p>有三种方式可以实现，<a href="https://tomoyd.github.io/hexo-blog/demos/aTag/download.html">示例地址</a></p>
+<a id="more"></a>
 <ul>
 <li><p>直接使用<code>href</code>属性链接到资源地址</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"资源地址"</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
