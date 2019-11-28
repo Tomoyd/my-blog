@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>wheel_01</title>
+    <url>/my-blog/2019/11/27/wheel-01/</url>
+    <content><![CDATA[<h3 id="吸顶效果"><a href="#吸顶效果" class="headerlink" title="吸顶效果"></a><a href="https://tomoyd.github.io/wheels/top-style">吸顶效果</a></h3>]]></content>
+      <tags>
+        <tag>轮子</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>fullScene</title>
     <url>/my-blog/2019/11/21/fullScene/</url>
     <content><![CDATA[<h2 id="浏览器全屏"><a href="#浏览器全屏" class="headerlink" title="浏览器全屏"></a>浏览器全屏</h2><p>实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的全屏实现方法及标准的实现方法;其次要考虑到功能完整性，开启全屏和关闭全屏应是一致出现的,<a href="https://tomoyd.github.io/FrontedTechStack/demo/FullScreen/full-screen">预览地址</a></p>
