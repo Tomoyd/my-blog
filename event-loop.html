@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Tomo, Blog" />
+  <meta name="keywords" content="js," />
 
 
 
@@ -79,14 +79,15 @@
 
 
 
-<meta name="description" content="我本当不打渔关门闭坐">
-<meta name="keywords" content="tomo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tomo">
-<meta property="og:url" content="https:&#x2F;&#x2F;tomoyd.github.io&#x2F;my-blog&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
+<meta name="description" content="事件循环 事件循环机制  JavaScript是单线程的，事件循环就是解决其运行阻塞的一种机制 宏任务：script，setTimeout，setInternal,setImmediate,I&#x2F;O，UI事件 微任务：process，nextTick，Promise，Object.observe,MutationObserver 1. 主线程执行任务，会形成一个执行栈，从任务列表中读取任务是循环不断">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="event_loop">
+<meta property="og:url" content="https:&#x2F;&#x2F;tomoyd.github.io&#x2F;my-blog&#x2F;event-loop.html">
 <meta property="og:site_name" content="Tomo">
-<meta property="og:description" content="我本当不打渔关门闭坐">
+<meta property="og:description" content="事件循环 事件循环机制  JavaScript是单线程的，事件循环就是解决其运行阻塞的一种机制 宏任务：script，setTimeout，setInternal,setImmediate,I&#x2F;O，UI事件 微任务：process，nextTick，Promise，Object.observe,MutationObserver 1. 主线程执行任务，会形成一个执行栈，从任务列表中读取任务是循环不断">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-01-20T04:55:11.798Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://tomoyd.github.io/my-blog/archives/2019/11/"/>
+  <link rel="canonical" href="https://tomoyd.github.io/my-blog/event-loop.html"/>
 
 
 
 
 
-  <title>归档 | Tomo</title>
+  <title>event_loop | Tomo</title>
   
 
 
@@ -142,7 +143,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,185 +271,235 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tomoyd.github.io/my-blog/my-blog/event-loop.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tomo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/my-blog/images/Tomo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tomo">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">event_loop</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-04T23:54:01+08:00">
+                2020-01-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 7 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/my-blog/event-loop.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/my-blog/event-loop.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
+             <span id="/my-blog/event-loop.html" class="leancloud_visitors" data-flag-title="event_loop">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/my-blog/wheel-01.html" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">wheel_01</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  304 字
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-27T22:35:13+08:00"
-              content="2019-11-27" >
-          11-27
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/my-blog/fullScene.html" itemprop="url">
-              
-                <span itemprop="name">fullScene</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-21T23:46:51+08:00"
-              content="2019-11-21" >
-          11-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><blockquote>
+<p>事件循环机制</p>
+</blockquote>
+<p><code>JavaScript</code>是单线程的，事件循环就是解决其运行阻塞的一种机制</p>
+<p>宏任务：script，<code>setTimeout</code>，<code>setInternal</code>,<code>setImmediate</code>,I/O，<code>UI</code>事件</p>
+<p>微任务：process，<code>nextTick</code>，Promise，<code>Object.observe</code>,<code>MutationObserver</code></p>
+<p><strong>1. 主线程执行任务，会形成一个执行栈，从任务列表中读取任务是循环不断的，这个运行机制形成了事件循环，</strong></p>
+<p><strong>2. 执行第一个宏任务，依次执行代码，遇到微任务推到微任务队列中，遇到宏任务放到宏任务队列中</strong></p>
+<p><strong>3. 执行完第一个宏任务中的非宏任务和非微任务代码后，取出所有的微任务，执行完</strong></p>
+<p><strong>4. 取出宏任务队列首个宏任务，按照步骤2,步骤3，步骤4循环执行，直到所有的执行完</strong></p>
+<p><strong>注意：对于所有的同步任务来说，同步用会在主线程形成一个执行栈</strong></p>
+<p><strong>对于异步任务，等待某个时机，触发线程，将回调函数加到队列中执行</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    resolve(<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="number">2</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">4</span>)</span><br><span class="line">&#125;).then(<span class="function"><span class="params">t</span> =&gt;</span> <span class="built_in">console</span>.log(t));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/my-blog/aTag.html" itemprop="url">
-              
-                <span itemprop="name">a 标签</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-15T01:04:00+08:00"
-              content="2019-11-15" >
-          11-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>依次会输出：4，3，2，1</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/my-blog/index.html" itemprop="url">
-              
-                <span itemprop="name">Hexo 搭建个人博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-14T04:29:46+08:00"
-              content="2019-11-14" >
-          11-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tomo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://tomoyd.github.io/my-blog/event-loop.html" title="event_loop">https://tomoyd.github.io/my-blog/event-loop.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/my-blog/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/my-blog/wheel-01.html" rel="next" title="wheel_01">
+                <i class="fa fa-chevron-left"></i> wheel_01
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/my-blog/%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8A%96%E5%8A%A8%E9%97%AE%E9%A2%98.html" rel="prev" title="常见的抖动问题">
+                常见的抖动问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -456,6 +507,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -478,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -553,6 +620,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件循环"><span class="nav-number">1.</span> <span class="nav-text">事件循环</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -703,6 +786,10 @@
 
 
   
+  <script type="text/javascript" src="/my-blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/my-blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

@@ -1,8 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>常见的抖动问题2</title>
+    <url>/my-blog/%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8A%96%E5%8A%A8%E9%97%AE%E9%A2%982.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>常见的抖动问题</title>
+    <url>/my-blog/%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8A%96%E5%8A%A8%E9%97%AE%E9%A2%98.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>event_loop</title>
+    <url>/my-blog/event-loop.html</url>
+    <content><![CDATA[<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><blockquote>
+<p>事件循环机制</p>
+</blockquote>
+<p><code>JavaScript</code>是单线程的，事件循环就是解决其运行阻塞的一种机制</p>
+<p>宏任务：script，<code>setTimeout</code>，<code>setInternal</code>,<code>setImmediate</code>,I/O，<code>UI</code>事件</p>
+<p>微任务：process，<code>nextTick</code>，Promise，<code>Object.observe</code>,<code>MutationObserver</code></p>
+<p><strong>1. 主线程执行任务，会形成一个执行栈，从任务列表中读取任务是循环不断的，这个运行机制形成了事件循环，</strong></p>
+<p><strong>2. 执行第一个宏任务，依次执行代码，遇到微任务推到微任务队列中，遇到宏任务放到宏任务队列中</strong></p>
+<p><strong>3. 执行完第一个宏任务中的非宏任务和非微任务代码后，取出所有的微任务，执行完</strong></p>
+<p><strong>4. 取出宏任务队列首个宏任务，按照步骤2,步骤3，步骤4循环执行，直到所有的执行完</strong></p>
+<p><strong>注意：对于所有的同步任务来说，同步用会在主线程形成一个执行栈</strong></p>
+<p><strong>对于异步任务，等待某个时机，触发线程，将回调函数加到队列中执行</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    resolve(<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="number">2</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">4</span>)</span><br><span class="line">&#125;).then(<span class="function"><span class="params">t</span> =&gt;</span> <span class="built_in">console</span>.log(t));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<p>依次会输出：4，3，2，1</p>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>wheel_01</title>
-    <url>/my-blog/2019/11/27/wheel-01/</url>
+    <url>/my-blog/wheel-01.html</url>
     <content><![CDATA[<h3 id="吸顶效果"><a href="#吸顶效果" class="headerlink" title="吸顶效果"></a><a href="https://tomoyd.github.io/wheels/top-style">吸顶效果</a></h3>]]></content>
       <tags>
         <tag>轮子</tag>
@@ -10,7 +43,7 @@
   </entry>
   <entry>
     <title>fullScene</title>
-    <url>/my-blog/2019/11/21/fullScene/</url>
+    <url>/my-blog/fullScene.html</url>
     <content><![CDATA[<h2 id="浏览器全屏"><a href="#浏览器全屏" class="headerlink" title="浏览器全屏"></a>浏览器全屏</h2><p>实现全屏功能，首先要考虑到的是浏览器兼容的问题，各个浏览器的全屏实现方法及标准的实现方法;其次要考虑到功能完整性，开启全屏和关闭全屏应是一致出现的,<a href="https://tomoyd.github.io/FrontedTechStack/demo/FullScreen/full-screen">预览地址</a></p>
 <a id="more"></a>
 <h2 id="全屏方法处理"><a href="#全屏方法处理" class="headerlink" title="全屏方法处理"></a>全屏方法处理</h2><p>调用dom元素的标准全屏方法requestFullScreen()，考虑到兼容各个浏览器故有以下代码 ：</p>
@@ -31,7 +64,7 @@
   </entry>
   <entry>
     <title>a 标签</title>
-    <url>/my-blog/2019/11/15/aTag/</url>
+    <url>/my-blog/aTag.html</url>
     <content><![CDATA[<h2 id="使用背景"><a href="#使用背景" class="headerlink" title="使用背景"></a>使用背景</h2><p>a 标签在实际开发过程中是会常用到，比如<strong>下载，跳转页面，导航</strong>等功能的实现</p>
 <h2 id="实现下载"><a href="#实现下载" class="headerlink" title="实现下载"></a>实现下载</h2><p>有三种方式可以实现，<a href="https://tomoyd.github.io/hexo-blog/demos/aTag/download.html">示例地址</a></p>
 <a id="more"></a>
@@ -70,7 +103,7 @@
   </entry>
   <entry>
     <title>Hexo 搭建个人博客</title>
-    <url>/my-blog/2019/11/14/index/</url>
+    <url>/my-blog/index.html</url>
     <content><![CDATA[<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>npm install -g hexo</p>
 <h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><p>命令行输入 <code>hexo init blogname</code></p>
 <h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>下载next主题</p>
