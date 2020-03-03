@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>常见的抖动问题2</title>
-    <url>/my-blog/%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8A%96%E5%8A%A8%E9%97%AE%E9%A2%982.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>常见的抖动问题</title>
-    <url>/my-blog/%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8A%96%E5%8A%A8%E9%97%AE%E9%A2%98.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>event_loop</title>
     <url>/my-blog/event-loop.html</url>
     <content><![CDATA[<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><blockquote>
