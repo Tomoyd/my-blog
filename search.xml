@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>webpack理解</title>
+    <url>/my-blog/webpack%E7%90%86%E8%A7%A3.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>webpack是一种Javascript应用程序的静态模块打包器，这里需要注意两个内容，webpack是为我们的JavaScript应用服务的，服务的内容是为打包应用所需的静态模块，也就是我们在开发中的依赖以及一些编写css和js及资源图片文字等静态资源，通过这个工具可以将我们的需要的打包浏览器能够解析渲染的文件</p>
+</blockquote>
+<h6 id="为什么需要webpack？"><a href="#为什么需要webpack？" class="headerlink" title="为什么需要webpack？"></a>为什么需要webpack？</h6><p>可以为我们做很好的前后端分离，前端按照前端开发项目目录，模块化管理编写前端业务逻辑，后端也安装后端的习惯编写自己的逻辑；打包工具就可以将前端的代码经过一定的优化或者压缩，组织成需要的目录结构文件，提供给服务器使用；</p>
+<h2 id="webpack理解"><a href="#webpack理解" class="headerlink" title="webpack理解"></a>webpack理解</h2><p>其实可以认为<code>webpack</code>主要服务两个方面：生产环境和开发者环境；也可以认为一个方面是结果，一个方面是过程</p>
+<h6 id="从结果来说："><a href="#从结果来说：" class="headerlink" title="从结果来说："></a>从结果来说：</h6><blockquote>
+<p>为生产环境输出一个经过精打细磨的前端文件夹：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这是我们用webpack最终要达到的需求，也就是我们需要一个能够进行尽可能优化的结果，比如我们可能需要，压缩文件，缓存的问题，模块的重复引用的问题等等，一些没有用到的函数的处理等</span><br></pre></td></tr></table></figure>
+
+<h6 id="从过程来说："><a href="#从过程来说：" class="headerlink" title="从过程来说："></a>从过程来说：</h6><blockquote>
+<p>在开发过程中，提高前端开发的效率</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这是我们webpack给我们提供的一种开发服务体验，让开发人员更好的去开发</span><br></pre></td></tr></table></figure>
+
+<h2 id="针对这两个方面的webpack需要的配置"><a href="#针对这两个方面的webpack需要的配置" class="headerlink" title="针对这两个方面的webpack需要的配置"></a>针对这两个方面的<code>webpack</code>需要的配置</h2><p>从开发的方面来说：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">`webpack`需要提供给我们一个开发服务器，相应的配置时`devServer`选项，而针对开发者服务器我们可以根据需求进行相关的配置，比如需要能够热更新等相关配置</span><br></pre></td></tr></table></figure>
+
+<p>从结果来说：</p>
+<ol>
+<li><p><code>webpack</code> 需要知道从哪里开始解析，也就是我们的入口文件input，也可指定多个入口文件</p>
+</li>
+<li><p><code>webpack</code>需要知道输出到哪里：output选项，以及输出的名称等</p>
+</li>
+<li><p><code>webpack</code>需要解析<code>css</code>，sass，以及图片的引入这些资源：<code>webpack</code>需要借助相应的模块</p>
+<p>去配置 需要相应的loader去解析，这个需要配置</p>
+</li>
+<li><p>需要<code>webpack</code>做一些特殊的处理，最后输出的文件，输出的文件是否需要压缩，模块引用的去重，一些其他的优化，这时就需要我们引入相应的插件plugin 进行处理</p>
+</li>
+</ol>
+<p>整个<code>webpack</code>可以说就是围绕着这几个内容去做相关配置的添加和修改的，也就是</p>
+]]></content>
+  </entry>
+  <entry>
     <title>event_loop</title>
     <url>/my-blog/event-loop.html</url>
     <content><![CDATA[<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><blockquote>
