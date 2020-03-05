@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>vueRouter剖析</title>
+    <url>/my-blog/vueRouter%E5%89%96%E6%9E%90.html</url>
+    <content><![CDATA[<h4 id="vueRouter使用"><a href="#vueRouter使用" class="headerlink" title="vueRouter使用"></a>vueRouter使用</h4><p>总体来看,要想使用vueRouter,需要三步:</p>
+<ul>
+<li>声明一个vueRouter的实例</li>
+<li>将vueRouter实例挂载到我们的vue实例的router选项</li>
+<li>在组件中使用视图标签router-view</li>
+</ul>
+<h4 id="路由基础"><a href="#路由基础" class="headerlink" title="路由基础"></a>路由基础</h4><ol>
+<li><p>路由匹配规则:通配符和匹配动态匹配,以及直接写死</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">path:&quot;/foo/123&quot;   只能匹配123</span><br><span class="line">path：&quot;/foo/:id&quot;  以id为参数接收第二个数，可以匹配/foo/123 /foo/uuu 等</span><br><span class="line">path：&quot;/foo/*&quot;    /foo/iii  /foo/8  /foo/hznag /foo/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>路由嵌套:</p>
+<ol>
+<li>父组件中使用视图</li>
+<li>路由规则上，添加children字段，包含子组件，路由信息</li>
+</ol>
+</li>
+<li><p>路由导航:</p>
+<p>编程时导航路由实例调用push方法，this.$router.push()  </p>
+<ul>
+<li><p>参数可以是字符串如 “/foo”</p>
+</li>
+<li><p>对象：{path:”/foo”,params:{id:1}}  {name:”foo”,params:{id:1}}  </p>
+<p>{name:”foo”,query:{key:1}}</p>
+</li>
+</ul>
+</li>
+<li><p>命名视图和命名路由:</p>
+<ol>
+<li><p>路由配置时可以给一个name属性以命名</p>
+</li>
+<li><p>视图也可以进行命名使用，以匹配相关的视图 如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;router-view name=&quot;test&quot;&gt;&lt;router-view&gt;</span><br><span class="line"></span><br><span class="line">在路由声明时，</span><br><span class="line">components:&#123;</span><br><span class="line">	defualt:DefautComponent,</span><br><span class="line">	test:TestComponent</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+</li>
+</ol>
+<ol start="5">
+<li><p>重定向和别名:</p>
+<p>redirect：”/a”,也可以是个函数，参数为to</p>
+<p>别名：为路由建立别名字，如path:”/a”,alias:”/b”</p>
+</li>
+<li><p>路由传参:</p>
+<p>参数会以params存在路由信息对象上，为了解耦，可以在路由声明上声明</p>
+<p>props为true，或者返回一个对象的函数，这个函数的参数为路由信息对象</p>
+</li>
+<li><p>模式:</p>
+<p>命名为history是要注意增加一个能够覆盖所有的情况的候选资源，如果匹配不到任何静态资源，就返回一个index.html页面</p>
+</li>
+</ol>
+<h4 id="路由守卫"><a href="#路由守卫" class="headerlink" title="路由守卫"></a>路由守卫</h4><p>离开或进入时会触发的路由守卫：</p>
+<h5 id="全局的路由守卫："><a href="#全局的路由守卫：" class="headerlink" title="全局的路由守卫："></a>全局的路由守卫：</h5><p>路由实例的beforeEach 三个参数 to form next</p>
+<p>next() 参数可以是空，false，路径，error</p>
+<p>beforeResolve：路由确认之前，同时所有组件内守卫和异步路由组件之后 触发</p>
+<p>后置：</p>
+<p>afterEach()  to,from</p>
+<h5 id="路由独享守卫"><a href="#路由独享守卫" class="headerlink" title="路由独享守卫"></a>路由独享守卫</h5><p>beforeEnter选项to form next</p>
+<h5 id="组件内守卫"><a href="#组件内守卫" class="headerlink" title="组件内守卫"></a>组件内守卫</h5><p>beforeRouteEnter</p>
+<p>beforeRouteUpdate</p>
+<p>beforeRouteLeave</p>
+<h4 id="路由元信息"><a href="#路由元信息" class="headerlink" title="路由元信息"></a>路由元信息</h4><p>路由配置的meta字段</p>
+<p>可以在路由信息matched字段中查找</p>
+<h4 id="过渡效果"><a href="#过渡效果" class="headerlink" title="过渡效果"></a>过渡效果</h4><p>可以在视图上加一些过渡效果</p>
+<h4 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h4><p>可以选择在路由组件的钩子函数和路由钩子函数中获取API数据</p>
+<h4 id="滚动行为"><a href="#滚动行为" class="headerlink" title="滚动行为"></a>滚动行为</h4><p>添加scrollBehavior：字段在由实例里面，返回一个对象 位置信息{x:0,y:0}或者{selector：to.hash}</p>
+<h4 id="懒加载："><a href="#懒加载：" class="headerlink" title="懒加载："></a>懒加载：</h4><p>使用import动态引入组件 import(“a.vue”)</p>
+<p>使用webpack打包到一个文件chunk中：import(/* webpackChunkName: “group-foo” */ ‘./Foo.vue’)</p>
+]]></content>
+  </entry>
+  <entry>
     <title>webpack理解</title>
     <url>/my-blog/webpack%E7%90%86%E8%A7%A3.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
