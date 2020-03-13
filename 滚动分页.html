@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Tomo">
 <meta property="og:description" content="实现简单滚动分页效果示例地址 主要场景展示大量的图片等内容，不需要用户点击，滑动加载的情况; 实现要点throttle(节流)，scroll事件，pageYOffset或者scrollTop属性 核心代码12345678910111213function throttleHandler(fn,delay)&amp;#123;    var timeouter=null    return ()=&amp;gt;&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-13T17:37:52.541Z">
+<meta property="og:updated_time" content="2020-03-13T17:49:11.704Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -403,7 +403,7 @@
       
 
       
-        <h1 id="实现简单滚动分页效果"><a href="#实现简单滚动分页效果" class="headerlink" title="实现简单滚动分页效果"></a>实现简单滚动分页效果</h1><p><a href="https://tomoyd.github.io/FrontedTechStack/demo/FullScreen/full-screen">示例地址</a></p>
+        <h1 id="实现简单滚动分页效果"><a href="#实现简单滚动分页效果" class="headerlink" title="实现简单滚动分页效果"></a>实现简单滚动分页效果</h1><p><a href="https://tomoyd.github.io/hexo-blog/demos/%E5%B8%B8%E8%A7%81%E9%9C%80%E6%B1%82/%E6%97%A0%E9%99%90%E6%BB%9A%E5%8A%A8.html">示例地址</a></p>
 <h4 id="主要场景"><a href="#主要场景" class="headerlink" title="主要场景"></a>主要场景</h4><p>展示大量的图片等内容，不需要用户点击，滑动加载的情况;</p>
 <h4 id="实现要点"><a href="#实现要点" class="headerlink" title="实现要点"></a>实现要点</h4><p>throttle(节流)，scroll事件，pageYOffset或者scrollTop属性</p>
 <h4 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttleHandler</span>(<span class="params">fn,delay</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> timeouter=<span class="literal">null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!timeouter&amp;&amp;<span class="built_in">window</span>.pageYOffset&gt;<span class="number">100</span>)&#123;</span><br><span class="line">                timeouter=setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">                    clearTimeout(timeouter);</span><br><span class="line">                    timeouter=<span class="literal">null</span></span><br><span class="line">                &#125;,delay);</span><br><span class="line">                fn()</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
